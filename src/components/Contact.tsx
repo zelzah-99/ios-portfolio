@@ -24,7 +24,7 @@ const Contact = () => {
           <div className="contact-box">
             <h4>Social</h4>
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/in/sai-kiran-desaboina-a1600b194/"
               target="_blank"
               data-cursor="disable"
               className="contact-social"
