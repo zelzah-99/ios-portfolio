@@ -34,6 +34,26 @@ const setCharacter = (
                 child.castShadow = true;
                 child.receiveShadow = true;
                 mesh.frustumCulled = true;
+
+                const name = mesh.name.toLowerCase();
+                let matName = "";
+                if (mesh.material) {
+                  const m = Array.isArray(mesh.material) ? mesh.material[0] : mesh.material;
+                  matName = m.name?.toLowerCase() || "";
+                }
+
+                // Recolor Shirt
+                if (name.includes("top") || name.includes("shirt") || matName.includes("top") || matName.includes("shirt")) {
+                  (mesh.material as THREE.MeshStandardMaterial).color.set("black");
+                }
+                // Recolor Pants
+                if (name.includes("bottom") || name.includes("pant") || matName.includes("bottom") || matName.includes("pant")) {
+                  (mesh.material as THREE.MeshStandardMaterial).color.set("#446d92");
+                }
+                // Recolor Skin
+                if (name.includes("body") || name.includes("head") || name.includes("hand") || name.includes("skin") || matName.includes("body") || matName.includes("head") || matName.includes("skin")) {
+                  (mesh.material as THREE.MeshStandardMaterial).color.set("#be9167");
+                }
               }
             });
             resolve(gltf);
