@@ -45,7 +45,7 @@ const Career = () => {
               <h3>May 2025</h3>
             </div>
             <p>
-              Currently completing Master of Science in CS. Also hold a Bachelor of Science in Computer Science from Gudlavalleru Engineering College, India (May 2021).
+              Completed Master of Science in CS. Also hold a Bachelor of Science in Computer Science from Gudlavalleru Engineering College, India (May 2021).
             </p>
           </div>
         </div>
